@@ -1,0 +1,9 @@
+<h1>Bands Index</h1>
+  <a href="<%= new_band_url %>">  Add Band  </a>
+  <br>
+    <% @bands.each do |band| %>
+      <a href="<%=band_url(band)%>"> <%= band.name %></a>
+      <br>
+      <%= button_to "Delet this", band_url(band), method: :delete%>
+      <br>
+    <% end %>

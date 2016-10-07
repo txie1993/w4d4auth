@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New User</title>
+</head>
+<body>
+<h1>Sign up</h1>
+ <form action="<%= users_url %>" method="post">
+   <%= auth_token %>
+     <label for="user_email"> Email </label>
+     <input type="text"
+     name="user[email]"
+     id="user_email"
+     value="<%=@user.email%>">
+   <br>
+
+   <label for="user_password"> Password </label>
+     <input type="password"
+     name="user[password]"
+     id="user_password"
+     value="<%=@user.password%>">
+   <br>
+         <input type="submit">
+ </form>
+
+</body>
+</html>

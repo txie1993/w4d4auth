@@ -1,0 +1,13 @@
+
+<br>
+<%= "#{@track.name} from #{@track.album.name}" %>
+<br>
+<%= button_to "edit track", edit_track_url, method: :get %>
+<br>
+<%= button_to "delete track", track_url(@track), method: :delete %>
+<br>
+
+<%= "#{@track.lyrics}" %>
+
+
+<%= link_to "album", album_url(@track.album), method: :get %>
